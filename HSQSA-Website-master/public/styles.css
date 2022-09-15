@@ -1,0 +1,190 @@
+:root {
+  --bg-color: #0B0D0F;
+  --orange: #FF945E;
+}
+
+body {
+    font-family: 'Noto Sans JP', serif;
+    background-color: var(--bg-color);
+    color: white;
+} 
+
+nav {
+    background-color: var(--bg-color);
+}
+
+a {
+    color: #FFBE9E;
+}
+a:hover {
+    color: #FEAA7E;
+    text-decoration: none;
+}
+
+hr {
+    background-color: white;
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.wide {
+    margin-left: 20rem;
+    margin-right: 20rem;
+}
+
+.header {
+    height: 80vh;
+    text-shadow: 1px 1px black;
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,1)), url('static/img/QC.jpg');
+}
+
+.highlight {
+    color: var(--orange);
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.list-div {
+    margin: 5rem;
+    margin-left: 10rem;
+}
+
+@media screen and (max-width: 45rem) {
+    .list-div {
+        margin: 5rem;
+    }
+}
+
+#buttons {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+button {
+
+    margin: 1rem;
+    padding: 1rem;
+
+    background-color: var(--bg-color);
+    color: white;
+
+    border: solid 1px var(--orange);
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button h2 {
+    color: var(--orange);
+}
+
+button:hover {
+    box-shadow: 1px 1px var(--orange);
+}
+
+#flyer {
+    width: min(75vw, 750px);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+    row-gap: 4rem;
+    justify-items: center;
+    align-items: center;
+    position: relative;
+}
+
+.card {
+    border: 1px solid white;
+    background-color: transparent;
+    width: 20rem;
+    height: 25rem;
+
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    -moz-backface-visibility: hidden;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front {
+    color: white;
+    display: flex;
+    justify-content: top;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    padding-left: 3rem;
+    padding-right: 3rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    font-size: 0.9rem;
+}
+
+@media screen and (max-width: 66rem) {
+    .team-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .wide {
+        margin: 5rem;
+    }
+}
+
+@media screen and (max-width: 44rem) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 20rem) {
+    .card {
+        width: 15rem;
+    }
+    .card-back {
+        font-size: 0.75rem;
+    }
+}
+
+.profile-pic {
+    max-width: 100%;
+    height: 60%;
+    margin: 10%;
+    border: 1px solid white;
+}
